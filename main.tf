@@ -3,6 +3,16 @@ provider "azurerm"{
 version = ">=2.0.0"
 features {}
 }
+
+# Terraform backend configuration block 
+terraform {
+backend "azurerm" {
+resorce_group_name = "rg-cloudquickpocs"
+storage_account_name = "ccpsazuretf0001"
+container_name = "ccpterrraformstatefile"
+key = "ccpsterraform.tfstate"
+}
+  
 #create Azure RG
 resource "azurerm_resource_group" "QuickCloudPOC"{
 name ="QuickCloudPOC-RG"
@@ -35,11 +45,4 @@ relative_url = "http://www.bing.com"
 request_body = "foo-bar"
 request_method = "POST"
 }
-# Terraform backend configuration block 
-terraform {
-backend "azurerm" {
-resorce_group_name = "rg-cloudquickpocs"
-storage_account_name = "ccpsazuretf0001"
-container_name = "ccpterrraformstatefile"
-key = "ccpsterraform.tfstate"
-}
+
