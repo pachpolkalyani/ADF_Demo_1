@@ -1,5 +1,3 @@
-
-  
 #create Azure RG
 resource "azurerm_resource_group" "QuickCloudPOC"{
 name ="QuickCloudPOC-RG"
