@@ -4,6 +4,7 @@ name ="QuickCloudPOC-RG"
 location = "northeurope"
 }
 
+
 #create Azure Data factory
 resource "azurerm_data_factory" "QuickCloudPOC"{
 name ="QuickCloudPOC"
